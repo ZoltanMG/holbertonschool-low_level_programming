@@ -8,7 +8,7 @@
 int main(void)
 {
 int m = 'a';
- int M = 'A';
+int M = 'A';
 while (m <= 'z')
 {
 putchar(m);
@@ -20,6 +20,5 @@ putchar(M);
 M++;
 }
 putchar('\n');
-
 return (0);
 }
