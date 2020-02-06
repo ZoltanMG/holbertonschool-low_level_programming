@@ -8,10 +8,10 @@
 int main(void)
 {
 int letra = 'a';
-while (letra <= z)
+while (letra <= 'z')
 {
 putchar(letra);
-letra = letra + 1;
+letra++;
 }
 putchar('\n');
 return (0);
