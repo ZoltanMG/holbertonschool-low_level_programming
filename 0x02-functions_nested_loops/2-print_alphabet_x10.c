@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_alphabet - writes the character c to stdout
+ * print_alphabet_x10 - writes the character c to stdout
  */
 void print_alphabet_x10(void)
 {
