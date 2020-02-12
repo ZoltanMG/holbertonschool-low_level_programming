@@ -2,11 +2,14 @@
 
 /**
  *times_table -prints time table
+ *
  *Return: always 0
  */
 void times_table(void)
 {
-	int a, b, r;
+	int a;
+	int b;
+	int r;
 
 	for (a = 0; a <= 9; a++)
 	{
