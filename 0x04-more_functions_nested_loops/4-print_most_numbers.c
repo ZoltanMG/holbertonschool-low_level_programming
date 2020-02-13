@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * print_numbers - print
+ * print_most_numbers - print
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	char a;
 
-	a = O;
+	a = 0;
 	while (a <= 9)
 	{
 		if (a != 2 && a != 4)
