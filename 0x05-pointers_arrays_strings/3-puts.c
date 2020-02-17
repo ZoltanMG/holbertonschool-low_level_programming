@@ -7,14 +7,12 @@ void _puts(char *str)
 {
 	int x;
 	int y;
-	int z;
 
 	for (x = 0; x < 256; x++)
 	{
 		if (str[x] == '\0')
 		{
-			z = x;
-			for (y = 0; y <= z; y++)
+			for (y = 0; y <= x; y++)
 			{
 				_putchar(str[y]);
 			}
