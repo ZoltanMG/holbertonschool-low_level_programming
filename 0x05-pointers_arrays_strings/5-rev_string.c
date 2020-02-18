@@ -17,7 +17,7 @@ void rev_string(char *s)
 			break;
 		}
 	}
-	for (a = (a - 1); a >=0; a--)
+	for (a = (a - 1); a >= 0; a--)
 	{
 		c[b] = s[a];
 		b++;
