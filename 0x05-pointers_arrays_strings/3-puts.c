@@ -1,19 +1,18 @@
 #include "holberton.h"
 /**
- * _puts - print a string
- * @str: pointer
+ * _puts - prints a string.
+ * @str : pointer-parameter
+ * Return: ntg.
  */
 void _puts(char *str)
 {
-	int z;
+	int x;
 
-	for (z = 0; z < 500; z++)
+	for (x = 0; x < 500; x++)
 	{
-		if (str[z] == '\0')
-		{
-			_putchar(str[z]);
+		if (str[x] == '\0')
 			break;
-		}
-		_putchar(str[z])
+		_putchar(str[x]);
 	}
+	_putchar('\n');
 }
