@@ -8,7 +8,7 @@ void _puts(char *str)
 	int x;
 	int y;
 
-	for (x = 0; x < 256; x++)
+	for (x = 0; x < 500; x++)
 	{
 		if (str[x] == '\0')
 		{
