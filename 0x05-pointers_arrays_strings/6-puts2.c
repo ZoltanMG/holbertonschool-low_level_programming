@@ -9,17 +9,16 @@ void puts2(char *str)
 	int a;
 	int b;
 
-	for (a = 0; a < 500 ; a++)
+	for (a = 0; a < 500; a++)
 	{
 		if (str[a] == '\0')
 			break;
 	}
-	for (b = 0; b < a; b++)
+	for (b = 0; b < a; b += 2)
 	{
 		if (str[a] == '\0')
 			break;
 		_putchar(str[b]);
-		b++;
 	}
 	_putchar('\n');
 }
