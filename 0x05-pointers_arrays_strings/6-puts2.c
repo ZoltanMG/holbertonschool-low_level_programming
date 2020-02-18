@@ -14,8 +14,10 @@ void puts2(char *str)
 		if (str[a] == '\0')
 			break;
 	}
-	for (b = 0; b <= a; b++)
+	for (b = 0; b < a; b++)
 	{
+		if (str[a] == '\0')
+			break;
 		_putchar(str[b]);
 		b++;
 	}
