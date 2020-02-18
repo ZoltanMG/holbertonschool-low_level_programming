@@ -5,19 +5,15 @@
  */
 void _puts(char *str)
 {
-	int x;
-	int y;
+	int z;
 
-	for (x = 0; x < 500; x++)
+	for (z = 0; z < 500; z++)
 	{
-		if (str[x] == '\0')
+		if (str[z] == '\0')
 		{
-			for (y = 0; y <= x; y++)
-			{
-				_putchar(str[y]);
-			}
-			_putchar('\n');
+			_putchar(str[z]);
 			break;
 		}
+		_putchar(str[z])
 	}
 }
