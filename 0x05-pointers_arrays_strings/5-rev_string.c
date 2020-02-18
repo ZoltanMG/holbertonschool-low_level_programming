@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <unistd.h>
 
 /**
  * rev_string - print a string in rev
@@ -7,19 +6,25 @@
  */
 void rev_string(char *s)
 {
-	int x;
-	int y;
+	int a;
+	int b = 0;
+	int c[500];
 
-	for (x = 0; x < 256; x++)
+	for (a = 0; a < 500; a++)
 	{
-		if (s[x] == '\0')
+		if (s[a] == '\0')
 		{
-			for (y = x; y >= 0; y--)
-			{
-				_putchar(s[y]);
-			}
-			_putchar('\n');
 			break;
 		}
+	}
+	for (a = (a - 1); a >=0; a--)
+	{
+		c[b] = s[a];
+		b++;
+	}
+
+	for (a = 0; a < b; a++)
+	{
+		s[a] = c[a];
 	}
 }
