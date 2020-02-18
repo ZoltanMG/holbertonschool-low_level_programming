@@ -8,13 +8,11 @@
 int _strlen(char *s)
 {
 	int x;
-	int y = 0;
 
-	for (x = 0; x < 256; x++)
+	for (x = 0; x < 500; x++)
 	{
 		if (s[x] == '\0')
 			break;
-		y++;
 	}
-	return (y);
+	return (x);
 }
