@@ -1,19 +1,19 @@
 #include "holberton.h"
 /**
- * _strcpy - print reverse
- * @dest: var pointer
- * @src: var pointer two
- * Return: no
+ * _strcpy - function pointer
+ * @dest: destino
+ * @src: data
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
-	int x;
+	int a;
 
-	for (x = 0; src[x] != '\0'; x++)
+	for (a = 0; src[a] != '\0'; a++)
 	{
-		dest[x] = src[x];
+		dest[a] = src[a];
 	}
-	dest[x] = '\0';
+	dest[a] = '\0';
 
 	return (dest);
 }
