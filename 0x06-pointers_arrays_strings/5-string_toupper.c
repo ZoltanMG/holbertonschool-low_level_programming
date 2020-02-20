@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * string_toupper
+ * string_toupper - function
  * @i: char
- * Retrun: i
+ * Return: i
  */
 char *string_toupper(char *i)
 {
