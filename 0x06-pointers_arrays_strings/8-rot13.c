@@ -1,12 +1,12 @@
 #include "holberton.h"
-
 /**
- * leet - function
+ * rot13 - function
  * @str: char
  * Return: str
  */
-char *leet(char *str)
+char *rot13(char *str)
 {
+
 	char az[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int out[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int a;
