@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * rot13 - function
  * @str: char
@@ -8,7 +9,7 @@ char *rot13(char *str)
 {
 
 	char az[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int out[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char out[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int a;
 	int b;
 
