@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-int m = 'a';
-int M = 'A';
-while (m <= 'z')
-{
-putchar(m);
-m++;
-}
-while (M <= 'Z')
-{
-putchar(M);
-M++;
-}
-putchar('\n');
-return (0);
+	int m = 'a';
+	int M = 'A';
+	while (m <= 'z')
+	{
+		putchar(m);
+		m++;
+	}
+	while (M <= 'Z')
+	{
+		putchar(M);
+		M++;
+	}
+	putchar('\n');
+	return (0);
 }
