@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-int letra = 'a';
-while (letra <= 'z')
-{
-if (letra != 'q' && letra != 'e')
-putchar(letra);
-letra++;
-}
-putchar('\n');
-return (0);
+	int letra = 'a';
+	while (letra <= 'z')
+	{
+		if (letra != 'q' && letra != 'e')
+			putchar(letra);
+		letra++;
+	}
+	putchar('\n');
+	return (0);
 }
