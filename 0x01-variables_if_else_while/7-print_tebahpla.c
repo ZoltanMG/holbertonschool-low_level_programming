@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-int letra = 'z';
-while (letra >= 'a')
-{
-putchar(letra);
-letra--;
-}
-putchar('\n');
-return (0);
+	int letra = 'z';
+	while (letra >= 'a')
+	{
+		putchar(letra);
+		letra--;
+	}
+	putchar('\n');
+	return (0);
 }
