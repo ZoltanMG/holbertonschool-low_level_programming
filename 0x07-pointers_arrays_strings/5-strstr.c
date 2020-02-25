@@ -11,7 +11,7 @@ char *_strstr(char *haystack, char *needle)
 	int i;
 	int j = 0;
 
-	if (*needle == '\0')
+	if (*needle == '\000')
 		return (0);
 	for (i = 0; *haystack; haystack++, i++)
 	{
