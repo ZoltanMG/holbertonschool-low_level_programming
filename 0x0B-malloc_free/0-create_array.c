@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * create_array - function to malloc and free
@@ -9,7 +9,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ptr;
-	int count;
+	unsigned int count;
 
 	ptr = malloc(size * sizeof(char));
 	for (count = 0; count < size; count++)
