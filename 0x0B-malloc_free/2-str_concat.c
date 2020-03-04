@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * str_concat - function
+ * @s1: char
+ * @s2: char
+ * Return: arr
+ */
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
