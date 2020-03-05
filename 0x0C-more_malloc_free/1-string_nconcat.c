@@ -8,6 +8,7 @@
  * @n: int
  * Return: arr
  */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int con = 0, con1 = 0, con3 = 0, con4 = 0, c = n;
