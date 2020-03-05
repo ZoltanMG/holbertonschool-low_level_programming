@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
+/**
+ * _calloc - function
+ * @nmemb: int
+ * @size: int
+ * Return: arr
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
