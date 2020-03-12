@@ -13,14 +13,14 @@ int main(int argc, char **argv)
 {
 	int res;
 
-	if (argc < 1 && argc > 4)
+	if ((argc < 1 && argc > 4) || (argv[2][0] != '\0'))
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '/' &&
-	     argv[2][0] != '*' && argv[2][0] != '%') || (argv[2][0] != '\0'))
+	if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '/' &&
+	     argv[2][0] != '*' && argv[2][0] != '%')
 	{
 		printf("Error\n");
 		exit(99);
