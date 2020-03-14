@@ -33,9 +33,13 @@ void f_f(va_list lis)
  */
 void s_f(va_list lis)
 {
-	if (lis == NULL)
+	char *a;
+
+	a = va_arg(lis, char *);
+	if (a == NULL)
+		printf("%s", a);
+	else
 		printf("(nil)");
-	printf("%s", va_arg(lis, char *));
 }
 
 /**
