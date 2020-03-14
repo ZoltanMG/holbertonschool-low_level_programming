@@ -48,10 +48,10 @@ void s_f(va_list lis)
 void print_all(const char * const format, ...)
 {
 	form arr[] = {
-		{"c", c_f},
-		{"i", i_f},
-		{"f", f_f},
-		{"s", s_f},
+		{'c', c_f},
+		{'i', i_f},
+		{'f', f_f},
+		{'s', s_f},
 		{NULL, NULL}
 	};
 	int i = 0;
@@ -60,11 +60,11 @@ void print_all(const char * const format, ...)
 	va_list ag;
 
 	va_start(ag, format);
-	while (format[j])
+	while (format[j] && format)
 	{
 		while (i < 4)
 		{
-			if (format[j] == arr[i].fmt[0])
+			if (format[j] == arr[i].fmt)
 			{
 				printf("%s", sep);
 				arr[i].f(ag);
@@ -76,4 +76,5 @@ void print_all(const char * const format, ...)
 		i = 0;
 	}
 	printf("\n");
+	va_end(ag);
 }
