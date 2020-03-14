@@ -27,8 +27,8 @@ void i_f(va_list lis)
  */
 void f_f(va_list lis)
 {
-	if (lis == NULL)
-		printf("(nill)");
+	if (!lis)
+		printf("(nil)");
 	printf("%f", va_arg(lis, double));
 }
 
