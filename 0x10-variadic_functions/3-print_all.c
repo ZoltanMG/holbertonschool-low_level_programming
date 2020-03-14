@@ -27,8 +27,6 @@ void i_f(va_list lis)
  */
 void f_f(va_list lis)
 {
-	if (lis == NULL)
-		printf("(nill)");
 	printf("%f", va_arg(lis, double));
 }
 
@@ -38,6 +36,8 @@ void f_f(va_list lis)
  */
 void s_f(va_list lis)
 {
+	if (lis == NULL)
+		printf("(nil)");
 	printf("%s", va_arg(lis, char *));
 }
 
@@ -76,4 +76,5 @@ void print_all(const char * const format, ...)
 		i = 0;
 	}
 	printf("\n");
+	va_end(ag);
 }
