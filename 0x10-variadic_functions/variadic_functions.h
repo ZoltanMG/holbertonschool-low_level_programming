@@ -10,7 +10,7 @@
  */
 typedef struct form_t
 {
-	char fmt;
+	char *fmt;
 	void (*f)(va_list);
 } form;
 
