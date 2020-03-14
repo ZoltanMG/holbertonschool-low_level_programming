@@ -60,7 +60,7 @@ void print_all(const char * const format, ...)
 	va_list ag;
 
 	va_start(ag, format);
-	while (format[j] && format)
+	while (format[j])
 	{
 		while (i < 4)
 		{
