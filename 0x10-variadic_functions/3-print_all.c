@@ -18,7 +18,7 @@ void c_f(va_list lis)
  */
 void i_f(va_list lis)
 {
-	printf("%d", va_arg(lis, int));
+	printf("%i", va_arg(lis, int));
 }
 
 /**
@@ -27,6 +27,8 @@ void i_f(va_list lis)
  */
 void f_f(va_list lis)
 {
+	if (lis == NULL)
+		printf("(nill)");
 	printf("%f", va_arg(lis, double));
 }
 
@@ -36,8 +38,6 @@ void f_f(va_list lis)
  */
 void s_f(va_list lis)
 {
-	if (!lis)
-		printf("(nil)");
 	printf("%s", va_arg(lis, char *));
 }
 
@@ -48,10 +48,10 @@ void s_f(va_list lis)
 void print_all(const char * const format, ...)
 {
 	form arr[] = {
-		{'c', c_f},
-		{'i', i_f},
-		{'f', f_f},
-		{'s', s_f},
+		{"c", c_f},
+		{"i", i_f},
+		{"f", f_f},
+		{"s", s_f},
 		{NULL, NULL}
 	};
 	int i = 0;
@@ -64,7 +64,7 @@ void print_all(const char * const format, ...)
 	{
 		while (i < 4)
 		{
-			if (format[j] == arr[i].fmt)
+			if (format[j] == arr[i].fmt[0])
 			{
 				printf("%s", sep);
 				arr[i].f(ag);
@@ -76,5 +76,4 @@ void print_all(const char * const format, ...)
 		i = 0;
 	}
 	printf("\n");
-	va_end(ag);
 }
