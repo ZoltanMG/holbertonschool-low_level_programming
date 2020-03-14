@@ -18,7 +18,7 @@ void c_f(va_list lis)
  */
 void i_f(va_list lis)
 {
-	printf("%i", va_arg(lis, int));
+	printf("%d", va_arg(lis, int));
 }
 
 /**
@@ -27,8 +27,6 @@ void i_f(va_list lis)
  */
 void f_f(va_list lis)
 {
-	if (!lis)
-		printf("(nil)");
 	printf("%f", va_arg(lis, double));
 }
 
@@ -38,6 +36,8 @@ void f_f(va_list lis)
  */
 void s_f(va_list lis)
 {
+	if (!lis)
+		printf("(nil)");
 	printf("%s", va_arg(lis, char *));
 }
 
