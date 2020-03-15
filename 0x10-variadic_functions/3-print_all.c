@@ -38,7 +38,7 @@ void s_f(va_list lis)
 
 	a = va_arg(lis, char *);
 
-	if (!*a)
+	if (a == NULL)
 		a = "(nil)";
 	printf("%s", a);
 }
