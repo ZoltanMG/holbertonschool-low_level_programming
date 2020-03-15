@@ -9,7 +9,6 @@ void c_f(va_list lis)
 {
 	printf("%c", va_arg(lis, int));
 }
-
 /**
  * i_f - func
  *
@@ -19,7 +18,6 @@ void i_f(va_list lis)
 {
 	printf("%d", va_arg(lis, int));
 }
-
 /**
  * f_f - func
  *
@@ -29,7 +27,6 @@ void f_f(va_list lis)
 {
 	printf("%f", va_arg(lis, double));
 }
-
 /**
  * s_f - func
  *
@@ -45,7 +42,6 @@ void s_f(va_list lis)
 		a = "(nil)";
 	printf("%s", a);
 }
-
 /**
  * print_all - func
  *
@@ -67,8 +63,9 @@ void print_all(const char * const format, ...)
 
 	va_start(ag, format);
 
-	while (format[i] && format)
+	while (format && format[i])
 	{
+		j = 0;
 		while (j < 4)
 		{
 			if (format[i] == arr[j].fmt)
@@ -80,7 +77,6 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		j = 0;
 	}
 	printf("\n");
 	va_end(ag);
