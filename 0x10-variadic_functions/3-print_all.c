@@ -2,6 +2,7 @@
 
 /**
  * c_f - func
+ *
  * @lis: va_list
  */
 void c_f(va_list lis)
@@ -11,15 +12,17 @@ void c_f(va_list lis)
 
 /**
  * i_f - func
+ *
  * @lis: va_list
  */
 void i_f(va_list lis)
 {
-	printf("%i", va_arg(lis, int));
+	printf("%d", va_arg(lis, int));
 }
 
 /**
  * f_f - func
+ *
  * @lis:  va_list
  */
 void f_f(va_list lis)
@@ -29,6 +32,7 @@ void f_f(va_list lis)
 
 /**
  * s_f - func
+ *
  * @lis: va_list
  */
 void s_f(va_list lis)
@@ -36,45 +40,47 @@ void s_f(va_list lis)
 	char *a;
 
 	a = va_arg(lis, char *);
-	if (*a)
-		printf("%s", a);
-	else
-		printf("(nil)");
+
+	if (!*a)
+		a = "(nil)";
+	printf("%s", a);
 }
 
 /**
  * print_all - func
+ *
  * @format: const
  */
 void print_all(const char * const format, ...)
 {
-	form arr[] = {
-		{"c", c_f},
-		{"i", i_f},
-		{"f", f_f},
-		{"s", s_f},
-		{NULL, NULL}
-	};
 	int i = 0;
 	int j = 0;
-	char *sep = "";
 	va_list ag;
+	char *sep = "";
+
+	form arr[] = {
+		{'c', c_f},
+		{'i', i_f},
+		{'f', f_f},
+		{'s', s_f}
+	};
 
 	va_start(ag, format);
-	while (format[j])
+
+	while (format[i] && format)
 	{
-		while (i < 4)
+		while (j < 4)
 		{
-			if (format[j] == arr[i].fmt[0])
+			if (format[i] == arr[j].fmt)
 			{
 				printf("%s", sep);
-				arr[i].f(ag);
+				arr[j].f(ag);
 				sep = ", ";
 			}
-			i++;
+			j++;
 		}
-		j++;
-		i = 0;
+		i++;
+		j = 0;
 	}
 	printf("\n");
 	va_end(ag);
