@@ -13,7 +13,7 @@
 typedef struct form_t
 {
 	char fmt;
-	void (*f)(va_list);
+	void (*f)(va_list lis);
 } form;
 
 int _putchar(char c);
