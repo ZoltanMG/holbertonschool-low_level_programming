@@ -1,0 +1,18 @@
+#include "lists.h"
+
+/**
+ * free_listint2 - function
+ * @head: listint data type
+ */
+void free_listint2(listint_t **head)
+{
+	listint_t *aux;
+
+	if (*head)
+	{
+		aux = *head;
+		free_listint2(&aux->next);
+		free(*head);
+	}
+	*head = NULL;
+}
