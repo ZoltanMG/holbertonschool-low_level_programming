@@ -12,9 +12,11 @@ unsigned int binary_to_uint(const char *b)
 	int pot = 1;
 	int num_d = 0;
 
+	if (b == NULL)
+		return (0);
 	while (b[a])
 	{
-		if ((b[a] != '1' && b[a] != '0') || (b == NULL))
+		if (b[a] != '1' && b[a] != '0')
 			return (0);
 		a++;
 	}
