@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int pot_1 = 1, pot_2, dup = n;
+	unsigned long int pot_1 = 1, pot_2, dup = n;
 	int count_1 = 0, count_2 = 1;
 
 	if (n == 0)
