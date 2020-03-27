@@ -11,8 +11,6 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 		_putchar(n + '0');
-	else if (n == 1)
-		_putchar(n + '0');
 	else
 	{
 		while (pot_1 <= dup)
