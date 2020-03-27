@@ -10,9 +10,9 @@ void print_binary(unsigned long int n)
 	int count_1 = 0, count_2 = 1;
 
 	if (n == 0)
-		putchar(n + '0');
+		_putchar(n + '0');
 	else if (n == 1)
-		putchar(n + '0');
+		_putchar(n + '0');
 	else
 	{
 		while (pot_1 <= dup)
@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
 			count_1++;
 		}
 		dup -= pot_2;
-		putchar('1');
+		_putchar('1');
 		while (pot_2 > 1)
 		{
 			pot_1 = 1;
@@ -36,11 +36,11 @@ void print_binary(unsigned long int n)
 			}
 			if (pot_1 <= dup)
 			{
-				putchar('1');
+				_putchar('1');
 				dup -= pot_1;
 			}
 			else
-				putchar('0');
+				_putchar('0');
 			pot_2 = pot_1;
 		}
 	}
