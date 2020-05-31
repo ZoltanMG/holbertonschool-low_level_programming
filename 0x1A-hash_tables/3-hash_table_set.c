@@ -1,11 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - function that adds an element to the hash table
- * @ht: hash table you want to add or update the key/value to
- * @key: is the key. key can not be an empty string
- * @value: value associated with the key.
- * Return: 1 in success
+ * hash_table_set - function that adds a key/value to ht
+ * @ht: hash table to update o adds
+ * @key: keyword
+ * @value: value to key
+ * Return: 1 if it succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -16,11 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
-		return (0);
 	aux = ht->array[index];
-	if (aux)
+	while (aux != NULL)
 	{
 		if (strcmp(aux->key, key) == 0)
 		{
@@ -28,17 +25,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			aux->value = strdup(value);
 			return (1);
 		}
-		while (aux != NULL)
-			aux = aux->next;
-		node->key = strdup(key);
-		node->value = strdup(value);
-		node->next = NULL;
-		aux->next = node;
-		return (1);
+		aux = aux->next;
 	}
+	node = malloc(sizeof(hash_node_t));
+	if (node == NULL)
+		return (0);
 	node->key = strdup(key);
 	node->value = strdup(value);
-	node->next = NULL;
+	node->next = ht->array[index];
 	ht->array[index] = node;
 	return (1);
 }
