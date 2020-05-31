@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			aux->value = strdup(value);
 			return (1);
 		}
-		while (aux->next != NULL)
+		while (aux != NULL)
 			aux = aux->next;
 		node->key = strdup(key);
 		node->value = strdup(value);
