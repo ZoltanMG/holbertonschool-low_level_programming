@@ -26,7 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (aux)
 	{
 		while (aux->next != NULL)
-        		aux = aux->next;
+			aux = aux->next;
 		aux->next = node;
 	}
 	else
