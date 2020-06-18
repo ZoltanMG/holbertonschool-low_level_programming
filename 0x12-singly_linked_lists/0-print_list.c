@@ -8,7 +8,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t n_nodo;
+	size_t n_nodo = 0;
 	char *nil = "(nil)";
 
 	if (h == NULL)
