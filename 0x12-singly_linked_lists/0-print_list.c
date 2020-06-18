@@ -1,25 +1,25 @@
 #include "lists.h"
 
 /**
- * print_list - Function linked.
- * @h: struct.
- * Return: size_t-
+ * print_list - This function print all nodos of a linked list.
+ * @h: Is a linked list.
+ *
+ * Return: Number of nodes.
  */
 size_t print_list(const list_t *h)
 {
-	size_t n = 0;
-	char *nil = "(nil)";
+	size_t n_nodo;
 
 	if (h == NULL)
 		return (0);
 	while (h)
 	{
-		if (h->str == NULL)
-			printf("[%d] %s\n", 0, nil);
+		if (!(h->str))
+			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		n++;
+		n_nodo++;
 	}
-	return (n);
+	return (n_nodo);
 }
