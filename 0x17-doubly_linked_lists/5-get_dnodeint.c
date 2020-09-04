@@ -1,19 +1,25 @@
 #include "lists.h"
+
+/**
+ * get_dnodeint_at_index - function that return a spesific node.
+ * @head: inked list.
+ * @index: index of linked list
+ *
+ * Return: node.
+ */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *h = NULL;
 	unsigned int count = 0;
 
 	if (head == NULL)
 		return (NULL);
 
-	h = head;
 
-	while(h)
+	while (head)
 	{
 		if (count == index)
-			return (h);
-		h = h->next;
+			return (head);
+		head = head->next;
 		count++;
 	}
 	return (NULL);
