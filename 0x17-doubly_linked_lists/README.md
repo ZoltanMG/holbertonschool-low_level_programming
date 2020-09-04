@@ -1,15 +1,15 @@
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXdz-gINf92lm-KSC9H0FP7KFJO2YDhvH0GQ&usqp=CAU)
 
-#0x17. C - Doubly linked lists
+# 0x17. C - Doubly linked lists
 
-##Learning Objetives
+## Learning Objetives
 
 - What is a doubly linked list
 - How to use doubly linked lists
 - Start to look for the right source of information without too much help
 
-##Requirements
-###General
+## Requirements
+### General
 
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 14.04 LTS
@@ -25,7 +25,7 @@
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
-##More info
+## More info
 Please use this data structure for this project:
 
     /**
