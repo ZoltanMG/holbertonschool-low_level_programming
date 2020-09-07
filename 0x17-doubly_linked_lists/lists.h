@@ -32,4 +32,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 ;
 dlistint_t *add_node_num(dlistint_t **h, unsigned int idx, int n);
+int delet_node(dlistint_t **head, unsigned int index);
 #endif
