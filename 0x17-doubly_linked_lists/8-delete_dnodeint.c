@@ -9,65 +9,44 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
+	dlistint_t *aux;
+	dlistint_t *aux_2;
 	unsigned int count = 0;
-	dlistint_t *h = *head;
 
-	if (h == NULL)
+	if (*head == NULL)
 		return (-1);
-	while (h->next)
-	{
-		h = h->next;
-		count++;
-	}
+	aux = *head;
 
-	h = *head;
 	if (index == 0)
 	{
-		*head = h->next;
-		h->prev = NULL;
-		free(h);
+		*head = aux->next;
+		if (aux->next != NULL)
+			aux->next->prev = NULL;
+		free(aux);
 		return (1);
 	}
-	else if (index > 0 && index < count)
-		return (delet_node(head, index));
-	else if (index == count)
+	aux_2 = *head;
+	while (aux)
 	{
-		while (h->next)
-			h = h->next;
-
-		if (h->prev != NULL)
-			h->prev->next = NULL;
-		else
-			*head = NULL;
-		free(h);
-		return (1);
-	}
-	return (-1);
-}
-
-/**
- * delet_node - delete node in a  linked list.
- * @head: doubly pointer to linked list.
- * @index: intex to delete
- *
- * Return: 1 if it succeeded, -1 if it failed.
- */
-int delet_node(dlistint_t **head, unsigned int index)
-{
-	dlistint_t *h = *head;
-	unsigned int count = 0;
-
-	while (h)
-	{
-		if (count == index)
+		aux = aux->next;
+		if (count == (index - 1))
 		{
-			h->prev->next = h->next;
-			h->next->prev = h->prev;
-			free(h);
-			break;
+			if (aux->next != NULL)
+			{
+				aux->next->prev = aux_2;
+				aux_2->next = aux->next;
+				free(aux);
+				return (1);
+			}
+			else
+			{
+				aux_2->next = NULL;
+				free(aux);
+				return (1);
+			}
 		}
-		h = h->next;
+		aux_2 = aux_2->next;
 		count++;
 	}
-	return (1);
+	return (-1);
 }
