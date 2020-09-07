@@ -21,7 +21,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 
 	h = *head;
-	if(index == 0)
+	if (index == 0)
 	{
 		*head = h->next;
 		h->prev = NULL;
@@ -43,7 +43,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 
 /**
- * delete_dnodeint_at_index - delete node in a  linked list.
+ * delet_node - delete node in a  linked list.
  * @head: doubly pointer to linked list.
  * @index: intex to delete
  *
