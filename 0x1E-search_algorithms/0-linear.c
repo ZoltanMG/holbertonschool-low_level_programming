@@ -22,12 +22,9 @@ int linear_search(int *array, size_t size, int value)
 			printf("Value checked array[%i] = [%i]\n",
 			       count,
 			       array[count]);
-			break;
+			return (count);
 		}
 		printf("Value checked array[%i] = [%i]\n", count, array[count]);
 	}
-	if (count > t_size)
-		return (-1);
-
-	return (count);
+	return (-1);
 }
